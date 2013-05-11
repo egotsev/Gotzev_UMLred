@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <wizard
+            id="org.elsys.sequenceDiagram.presentation.SequenceDiagramModelWizardID"
+            name="Sequence Diagram"
+            class="org.elsys.sequenceDiagram.presentation.SequenceDiagramModelWizard"
+            category="org.elsys.UMLDiagrams"
+            icon="icons/SequenceDiagram3.png">
+         <description>%_UI_SequenceDiagramModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+      <category
+            id="org.elsys.UMLDiagrams"
+            name="UML Diagrams">
+      </category>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            id="org.elsys.sequenceDiagram.presentation.SequenceDiagramEditorID"
+            name="%_UI_SequenceDiagramEditor_label"
+            icon="icons/SequenceDiagram3.png"
+            extensions="sequencediagram"
+            class="org.elsys.sequenceDiagram.presentation.SequenceDiagramEditor"
+            contributorClass="org.elsys.sequenceDiagram.presentation.SequenceDiagramActionBarContributor">
+      </editor>
+      <editor
+            class="org.elsys.sequenceDiagram.gef.SequenceGraphicalEditor"
+            contributorClass="org.elsys.sequenceDiagram.gef.actions.EditorActionBarContributor"
+            default="true"
+            extensions="sequencediagram"
+            icon="icons/SequenceDiagram3.png"
+            id="org.elsys.sequenceDiagram.editor.editor1"
+            name="Sequence Graphical Editor">
+      </editor>
+   </extension>
+
+</plugin>
